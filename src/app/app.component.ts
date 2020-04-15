@@ -11,4 +11,7 @@ export class AppComponent {
   onButtonClick() {
     this.password = "My password"
   }
+  getName() {
+    return "Phuc"
+  }
 }
