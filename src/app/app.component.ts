@@ -7,14 +7,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
+
   password = ""
 
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters
   }
 
+  onChangeUseNumbers() {
+    this.includeNumbers = !this.includeNumbers
+  }
+
+  onChangeUseSymbols() {
+    this.includeSymbols = !this.includeSymbols
+  }
+
   onButtonClick() {
-    console.log(this.includeLetters);
+    console.log(`
+    About to generate a password with
+    includes letter ${this.includeLetters}
+    includes numbers ${this.includeNumbers}
+    includes symbols ${this.includeSymbols}
+    `);
 
     this.password = "My password"
   }
