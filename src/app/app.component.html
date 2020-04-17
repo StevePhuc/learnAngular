@@ -1,33 +1,16 @@
-<h1>Password Generator</h1>
-
-<div>
-  <label>Enter Length:</label>
-  <input (input)="onChangeLength($event.target.value)" />
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="" />
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="meida-content">
+      <p class="title is-4">Neat Tree </p>
+      <p class="subtitle is-6">@nature</p>
+    </div>
+    <div class="content">
+      Saw this awesome tree during my hike today
+    </div>
+  </div>
 </div>
-
-<div>
-  <label>Use Letters</label>
-  <input (change)="onChangeUseLetters()" type="checkbox" />
-</div>
-<div>
-  <label>Use Numbers</label>
-  <input (change)="onChangeUseNumbers()" type="checkbox" />
-</div>
-<div>
-  <label>Use Symbols</label>
-  <input (change)="onChangeUseSymbols()" type="checkbox" />
-</div>
-
-<div>
-  <button [disabled]="!(length &&(includeLetters||includeNumbers||includeSymbols))" (click)="onButtonClick()">
-    Generate
-  </button>
-</div>
-
-<div class="box" *ngIf="password">
-  <label>Your Password</label>
-  <input [value]="password" />
-</div>
-
-{{password}}
-{{getName()}}
